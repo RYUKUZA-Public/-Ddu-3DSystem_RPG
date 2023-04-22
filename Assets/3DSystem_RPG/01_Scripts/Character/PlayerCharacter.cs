@@ -61,10 +61,10 @@ public class PlayerCharacter : MonoBehaviour
             animator.SetBool(_moveHash, false);
         }
 
-        if (_agent.isOnOffMeshLink)
-            animator.SetBool(_fallingHash, _agent.velocity.y != 0.0f);
-        else
-            animator.SetBool(_fallingHash, false);
+        // if (_agent.isOnOffMeshLink)
+        //     animator.SetBool(_fallingHash, _agent.velocity.y != 0.0f);
+        // else
+        //     animator.SetBool(_fallingHash, false);
     }
     
     private void OnAnimatorMove()
