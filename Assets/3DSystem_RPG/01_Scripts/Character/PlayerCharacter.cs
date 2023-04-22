@@ -17,6 +17,8 @@ public class PlayerCharacter : MonoBehaviour
 
     readonly int _moveHash = Animator.StringToHash("Move");
     readonly int _fallingHash = Animator.StringToHash("Falling");
+    
+    [SerializeField] private Transform hitPoint;
     #endregion
     
     #region [Unity Methods]
@@ -74,4 +76,16 @@ public class PlayerCharacter : MonoBehaviour
         transform.position = position;
     }
     #endregion
+    
+    public void TakeDamage(int damage, GameObject hitEffect)
+    {
+        if (hitEffect)
+            GameObject.Instantiate<GameObject>(hitEffect, hitPoint);
+    }
+
+    public void TakeHeal(int heal, GameObject healEffect)
+    {
+        if (healEffect)
+            GameObject.Instantiate<GameObject>(healEffect, hitPoint);
+    }
 }

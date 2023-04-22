@@ -201,6 +201,8 @@ GameObject:
   - component: {fileID: 2796195201939525829}
   - component: {fileID: 2796195202460309097}
   - component: {fileID: 2796195202460309110}
+  - component: {fileID: 1403257961}
+  - component: {fileID: 1403257962}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -285,6 +287,49 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1403257961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2796195201948885773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab56cab9fbf3de42b4f29904e40a825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 5
+  viewAngle: 90
+  delay: 0.2
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 320
+--- !u!114 &1403257962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2796195201948885773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1bba3b3c5fa3d45a65eea276e12c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 5
+  attackRange: 1.5
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+  weaponCollider: {fileID: 0}
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  targetWaypoint: {fileID: 0}
 --- !u!1 &2796195201948885775
 GameObject:
   m_ObjectHideFlags: 0
