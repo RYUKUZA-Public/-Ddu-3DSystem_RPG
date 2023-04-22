@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TopDownCamera : MonoBehaviour
+public class TopDownCamera : BaseCamera
 {
     #region [Var]
     public float height = 5f;
@@ -10,13 +10,9 @@ public class TopDownCamera : MonoBehaviour
     public float smoothSpeed = 0.5f;
     
     private Vector3 _refVelocity;
-
-    public Transform target;
     #endregion
-
-    private void LateUpdate() => HandleCamera();
-
-    private void HandleCamera()
+    
+    public override void HandleCamera()
     {
         if (!target)
             return;
