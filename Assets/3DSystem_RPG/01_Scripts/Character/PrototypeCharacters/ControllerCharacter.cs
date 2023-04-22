@@ -10,8 +10,6 @@ public class ControllerCharacter : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpHeight = 2f;
     [SerializeField] private float gravity = -9.81f;
-    [SerializeField] private float groundCheckDistance = 0.2f;
-    [SerializeField] private LayerMask groundLayerMask;
     [SerializeField] private float dashDistance = 5f;
     [SerializeField] private Vector3 drags;
     
